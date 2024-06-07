@@ -1,13 +1,13 @@
 
-# Deploy a FastAPI App to Deta Space with PHIRO 🔥🔥
+# Deploy a FastAPI App to Deta Space
 
-We're excited to share our first open project on GitHub, a FastAPI application deployed on a public server in Deta Space. Whether you're a seasoned developer or a passionate newcomer, this guide will help you deploy your own FastAPI app effortlessly. Let's turn your innovative ideas into reality! 🔥
+We're excited to share our first open project on GitHub, a FastAPI application deployed on a public server in Deta Space. Whether you're a seasoned developer or a passionate newcomer, this guide will help you deploy your own FastAPI app effortlessly. 
 
-## Why Deta Space? 🔥
+## 🔥 Why Deta Space? 
 
 In the spirit of PHIRO's mission, we're always on the lookout for accessible and sustainable tech solutions. Deta Space offers a free and reliable platform to deploy your applications, perfect for those late-night ideas when you just have to build one more to-do app. No more worrying about Heroku's pricing changes—Deta Space has got you covered.
 
-## Setting Up Deta Space 🔥
+## 🔥 Setting Up Deta Space 
 
 First, you'll need to install the [Space CLI](https://deta.space/docs/en/build/fundamentals/space-cli/).
 
@@ -23,7 +23,7 @@ Create a new project (we're calling it _fast-api-sample_ for this example):
 space new
 ```
 
-## Creating the Spacefile 🔥
+## 🔥 Creating the Spacefile
 
 Your \`Spacefile\` is the blueprint for your project. It should look something like this:
 
@@ -39,7 +39,7 @@ micros:
 
 Note that \`main:app\` refers to the \`main.py\` file and the \`app\` instance within it.
 
-## Building Your FastAPI App 🔥
+## 🔥 Building Your FastAPI App
 
 Here's a simple FastAPI app to get you started:
 
@@ -59,7 +59,7 @@ Ensure you have a \`requirements.txt\` file listing your dependencies. For this 
 fastapi
 ```
 
-## Deploying Your App 🔥
+## 🔥 Deploying Your App
 
 With everything set up, you can deploy your app with a simple push command:
 
