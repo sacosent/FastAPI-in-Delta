@@ -1,28 +1,31 @@
-# Deploy a FastAPI app to Deta Space
 
-Sometimes you need to host an API anywhere in the web because you had this crazy idea on doing one more todo app during your insomnia but then you realize Heroku is no longer free for this.
+# Deploy a FastAPI App to Deta Space with PHIRO 🔥🔥
 
-No worries, there are several free options in the web. This project aims to show you how to deploy a FastAPI app to Deta Space.
+We're excited to share our first open project on GitHub, a FastAPI application deployed on a public server in Deta Space. Whether you're a seasoned developer or a passionate newcomer, this guide will help you deploy your own FastAPI app effortlessly. Let's turn your innovative ideas into reality! 🔥
 
-## Setting up Deta Space
+## Why Deta Space? 🔥
 
-You should have the [Space CLI](https://deta.space/docs/en/build/fundamentals/space-cli/) installed.
+In the spirit of PHIRO's mission, we're always on the lookout for accessible and sustainable tech solutions. Deta Space offers a free and reliable platform to deploy your applications, perfect for those late-night ideas when you just have to build one more to-do app. No more worrying about Heroku's pricing changes—Deta Space has got you covered.
 
-You should get the access the token from your Deta Space settings:
+## Setting Up Deta Space 🔥
+
+First, you'll need to install the [Space CLI](https://deta.space/docs/en/build/fundamentals/space-cli/).
+
+Next, log in to Deta Space to get your access token:
 
 ```bash
 space login
 ```
 
-Then we create our new project (I'm calling it _fast-api-sample_ here):
+Create a new project (we're calling it _fast-api-sample_ for this example):
 
 ```bash
 space new
 ```
 
-## The Spacefile
+## Creating the Spacefile 🔥
 
-Your Spacefile should look similar to this:
+Your \`Spacefile\` is the blueprint for your project. It should look something like this:
 
 ```yaml
 v: 0
@@ -34,44 +37,51 @@ micros:
     dev: .venv/bin/uvicorn main:app --reload
 ```
 
-Remember, `main:app` refers to `main.py` file / module and `app` 
+Note that \`main:app\` refers to the \`main.py\` file and the \`app\` instance within it.
 
-## The FastAPI app
+## Building Your FastAPI App 🔥
 
-This is the simplest FastAPI app you can get:
+Here's a simple FastAPI app to get you started:
 
 ```python
 from fastapi import FastAPI
 
 app = FastAPI()
 
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 ```
 
-Remember, you need the `requirements.txt` file with all the needed dependencies. In this case, the simpler is:
+Ensure you have a \`requirements.txt\` file listing your dependencies. For this basic app, it should include:
 
 ```
 fastapi
 ```
 
-## Deploying the app
+## Deploying Your App 🔥
 
-Now, you just need to push the app:
+With everything set up, you can deploy your app with a simple push command:
 
 ```bash
 space push
 ```
 
-And if everything is right, you should receive a happy message like this in the end:
+If everything is configured correctly, you'll see a message like this:
 
 ```
 🎉  Successfully pushed your code and updated your Builder instance!
 Builder instance: <https://fastapisample-1-p5210071.deta.app>
 ```
 
-And your API is up in the web ⛅.
+And just like that, your API is live on the web! ⛅
 
-🏗️Happy building!
+## Join the PHIRO Community
+
+<div align="center" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <img src="https://github.com/sacosent/fastapi-in-delta/assets/72815091/edc344b3-b01c-4f4c-a627-2e59d0e46b1c" width="30%" height="30%">
+</div>
+
+At PHIRO, every project is a collaborative effort, driven by passion and innovation. Join us in creating technology that makes a difference. Dive into this project, contribute, and share your feedback. Together, we can build something amazing.
+
+🔥 Ignite Inovation 🔥
